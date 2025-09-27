@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royelle - Jardines del Hotel</title>
+    <style>
+        :root {
+            --primary-color: #4b6a4a; /* Color verde oscuro de la primera página */
+            --secondary-color: #f0f0f0;
+            --dark-color: #333;
+            --light-color: #fff;
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+        }
+
+        .header {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+
+        .contact-bar {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 20px;
+            background-color: #03312E;
+            font-size: 0.9em;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: white;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #03312E
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            color: #03312E;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+            color: #03312E;
+        }
+
+        .nav-links a {
+            color: var(--light-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            color: #03312E;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .book-now {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .book-now:hover {
+            background-color: #3d563d;
+        }
+
+        .hero-section {
+            position: relative;
+            height: 400px;
+            /* Aquí está el cambio: URL de una imagen de jardines */
+            background-image: url('https://www.shutterstock.com/image-photo/gardening-tools-set-flowers-sunny-260nw-1639064380.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--light-color);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.4);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-overlay h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #fff; /* Asegura que el texto sea blanco para que se vea bien */
+        }
+
+        .hero-overlay p {
+            font-size: 1.2em;
+            text-transform: uppercase;
+            color: #fff; /* Asegura que el texto sea blanco para que se vea bien */
+        }
+
+        .content {
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .section-text {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .plant-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            text-align: left;
+        }
+
+        .plant-card {
+            background-color: var(--light-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .plant-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .plant-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .plant-card h3 {
+            color: var(--primary-color);
+            font-size: 1.5em;
+            margin: 15px;
+        }
+
+        .plant-card p {
+            color: #666;
+            font-size: 0.9em;
+            padding: 0 15px 15px;
+            margin: 0;
+        }
+
+        .footer {
+            background-color: #2c2c2c;
+            color: var(--light-color);
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="contact-bar">
+            <span>(000) 000-0000</span>
+            <span>example@gmail.com</span>
+            <span>2464 Royal Ln. Mesa, New Jersey 45463</span>
+        </div>
+        <nav class="navbar">
+            <div class="logo">🏨 Royelle</div>
+            <ul class="nav-links">
+                <li><a href="restaurante.html">Restaurante</a></li>
+                <li><a href="index.html">start and rooms</a></li>
+                <li><a href="deportes.html">sports</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <button class="book-now">Reservar Ahora</button>
+        </nav>
+    </header>
+
+    <div class="hero-section">
+        <div class="hero-overlay">
+            <h1>Jardines del Hotel</h1>
+            <p>Inicio > Jardines</p>
+        </div>
+    </div>
+
+    <main class="content">
+        <section class="welcome-section">
+            <h2 class="section-title">BIENVENIDO A LOS JARDINES DEL ROYAL HOTEL</h2>
+            <p class="section-text">
+                Sumérgete en un santuario de paz y belleza natural. Los jardines del Royal Hotel han sido cuidadosamente diseñados para ofrecer un escape de la vida cotidiana, un espacio donde la arquitectura se fusiona con la naturaleza. Descubre nuestros vibrantes ecosistemas y relájate en un entorno de serenidad y verdor.
+            </p>
+        </section>
+
+        <section class="plants-section">
+            <h2 class="section-title">Descubre Nuestra Flora</h2>
+            <div class="plant-grid">
+                <div class="plant-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTulry2YxFADcUpBXIdzi6eH995B537nMX3Xw&s" alt="Rosales">
+                    <h3>Rosales (Rosa spp.)</h3>
+                    <p>Símbolo universal del amor y la belleza, nuestros rosales florecen en una amplia gama de colores. Disfruta de su delicado aroma mientras paseas por nuestros jardines.</p>
+                </div>
+                <div class="plant-card">
+                    <img src="https://www.shutterstock.com/image-photo/behind-blue-sky-picture-three-600nw-2587122355.jpg" alt="Helecho de Boston">
+                    <h3>Helecho de Boston (Nephrolepis exaltata)</h3>
+                    <p>Estos helechos de hojas frondosas y elegantes aportan un toque de frescura y serenidad. Se encuentran en las zonas más húmedas y con sombra, creando rincones perfectos para la meditación.</p>
+                </div>
+                <div class="plant-card">
+                    <img src="https://cdn.pixabay.com/photo/2021/10/04/11/20/cosmos-6680029_640.jpg" alt="Suculentas">
+                    <h3>Suculentas (Crassulaceae)</h3>
+                    <p>Adaptables y resistentes, nuestras colecciones de suculentas añaden textura y forma a los jardines. Son un recordatorio de la belleza que puede florecer incluso en condiciones adversas.</p>
+                </div>
+                <div class="plant-card">
+                    <img src="https://centrodejardineriagorbeia.com/wp-content/uploads/2022/04/Tulipanes-significadoflores-scaled.jpg" alt="Árbol de Ceiba">
+                    <h3>Árbol de Ceiba (Ceiba pentandra)</h3>
+                    <p>Imponente y majestuoso, el árbol de ceiba domina nuestro paisaje. Es un símbolo de fuerza y conexión con la naturaleza, proporcionando sombra y refugio a la vida silvestre.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Royal Hotel. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
