@@ -169,11 +169,11 @@
             color: #777;
             font-size: 14px;
         }
-        
+
         /* QR Code Section */
         .qr-section {
             text-align: center;
-            padding: 50px 20px;
+            padding: 10px 10px;
         }
 
         .qr-section h2 {
@@ -188,7 +188,15 @@
             border: 5px solid #03312E;
         }
 
-        /* Media Queries for Responsiveness */
+        .footer {
+            background-color: #2c2c2c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
             .top-bar {
                 flex-direction: column;
@@ -227,13 +235,11 @@
             }
         }
 
-        /* Agregado para pantallas muy pequeñas (300px) */
         @media (max-width: 400px) {
             .top-bar, nav {
                 padding: 10px;
             }
             .activity-grid {
-                /* Forzar una columna simple en pantallas muy pequeñas */
                 grid-template-columns: 1fr;
             }
             .qr-code img {
@@ -266,6 +272,7 @@
             <li><a href="restaurante.html">Restaurant</a></li>
             <li><a href="deportes.html" class="active">Sports</a></li>
             <li><a href="jardineria.html">Gardening</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
@@ -280,6 +287,7 @@
     <section class="activities">
         <h2>Enjoy Our Sports</h2>
         <div class="activity-grid">
+            
             <div class="activity-card">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWIHbtHVx1GiQzv3PctdxJCsIr6MpOGgI8rg&s" alt="Tenis">
                 <div class="activity-info">
@@ -321,10 +329,27 @@
             </div>
 
             <div class="activity-card">
-                <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf" alt="Ciclismo">
+                <img src="img/cilcismo.jpg" alt="Ciclismo">
                 <div class="activity-info">
                     <h3>Ciclismo</h3>
                     <p>Rutas guiadas y bicicletas disponibles para nuestros huéspedes.</p>
+                </div>
+            </div>
+
+            <!-- NUEVOS CONTENEDORES -->
+            <div class="activity-card">
+                <img src="img/baloncesto.jpg" alt="Baloncesto">
+                <div class="activity-info">
+                    <h3>Baloncesto</h3>
+                    <p>Cancha moderna para partidos recreativos y entrenamientos en equipo.</p>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <img src="img/golf.jpeg" alt="Golf">
+                <div class="activity-info">
+                    <h3>Golf</h3>
+                    <p>Campo de golf rodeado de naturaleza con clases para principiantes y expertos.</p>
                 </div>
             </div>
         </div>
@@ -333,10 +358,13 @@
     <section class="qr-section">
         <h2>Escanea para Reservar</h2>
         <div class="qr-code">
-            <img src="https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl=https://www.tu-pagina-de-reservas.com" alt="Código QR para reservas">
+            <img src="img/codigo qr.png" alt="Código QR para reservas">
         </div>
         <p>Escanea este código para acceder a nuestro sistema de reservas y planificar tu próxima actividad deportiva.</p>
     </section>
 
+    <footer class="footer">
+        <p>&copy; 2025 Royal Hotel. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
